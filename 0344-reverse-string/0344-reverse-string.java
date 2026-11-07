@@ -1,14 +1,11 @@
 class Solution {
     public void reverseString(char[] s) {
-        int p = 0;
-        int q = s.length-1;
-        char temp ;
-        while(p<q){
-            temp= s[p];
-            s[p]=s[q];
-            s[q]=temp;
-            p++;
-            q--;
+        String str = new String(s);
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+
+        for(int i = 0; i < s.length; i++) {
+            s[i] = sb.charAt(i);
         }
     }
 }
